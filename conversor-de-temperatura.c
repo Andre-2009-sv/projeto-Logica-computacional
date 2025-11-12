@@ -4,7 +4,7 @@ int main() {
     float temperatura, celsius, fahrenheit, kelvin;
     char escala;
 
-    printf("=== Conversor de Temperatura ===\n");
+    printf("=== Conversor de Temperatura ===\n\n");
 
     printf("Digite a temperatura: ");
     scanf("%f", &temperatura);
