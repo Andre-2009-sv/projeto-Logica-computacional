@@ -1,0 +1,69 @@
+Pseudocódigo dos programas
+
+-Calculadora:
+INÍCIO
+    DECLARAR operador como CARACTERE
+    DECLARAR num1, num2, resultado como REAL
+
+    MOSTRAR "Calculadora"
+
+    MOSTRAR "Digite o primeiro número: "
+    LER num1
+
+    MOSTRAR "Digite o segundo número: "
+    LER num2
+
+    MOSTRAR "Digite o operador (+, -, *, /): "
+    LER operador
+
+    SELECIONAR operador
+        CASO '+':
+            resultado = num1 + num2
+            MOSTRAR "Resultado: ", resultado
+            SAIR
+        CASO '-':
+            resultado = num1 - num2
+            MOSTRAR "Resultado: ", resultado
+            SAIR
+        CASO '*':
+            resultado = num1 * num2
+            MOSTRAR "Resultado: ", resultado
+            SAIR
+        CASO '/':
+            SE num2 é DIFERENTE DE 0 ENTÃO
+                resultado = num1 / num2
+                MOSTRAR "Resultado: ", resultado
+            SENÃO
+                EXIBIR "Divisão por zero não é permitida."
+            FIM SE
+            SAIR
+        CASO CONTRÁRIO:
+            MOSTRAR "Operador inválido. Por favor, use +, -, *, ou /."
+    FIM SELECIONAR
+FIM
+
+
+-Conversor de temperatura:
+INÍCIO
+    MOSTRAR "Conversor de Temperatura"
+    LER temperatura (float)
+    LER escala_origem (char)
+
+    SE escala_origem == 'C' ou 'c':
+        Calcular Fahrenheit = (temperatura × 9/5) + 32
+        Calcular Kelvin = temperatura + 273.15
+        Mostrar Fahrenheit e Kelvin
+
+    SENÃO SE escala_origem == 'F' ou 'f':
+        Calcular Celsius = (temperatura - 32) × 5/9
+        Calcular Kelvin = Celsius + 273.15
+        Mostrar Celsius e Kelvin
+
+    SENÃO SE escala_origem == 'K' ou 'k':
+        Calcular Celsius = temperatura - 273.15
+        Calcular Fahrenheit = (Celsius × 9/5) + 32
+        Mostrar Celsius e Fahrenheit
+
+    SENÃO:
+        MOSTRAR "Escala inválida."
+FIM
